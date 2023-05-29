@@ -11,9 +11,9 @@ export class CreateProductDto {
   readonly price: number;
 
   @IsString()
-  readonly mainImage: string;
+  mainImage: string;
 
   @IsArray()
   @IsString({ each: true })
-  readonly extraImages: string[];
+  extraImages: string[];
 }

@@ -1,15 +1,18 @@
-import { Controller, Get, Post, Body } from '@nestjs/common';
+// products.controller.ts
+import { Body, Controller, Get, Post, UploadedFile, UploadedFiles, UseInterceptors } from '@nestjs/common';
+import { FileInterceptor, FilesInterceptor } from '@nestjs/platform-express';
 import { CreateProductDto } from './dto/create-product.dto';
-import { Product } from './schema/product.schema';
 import { ProductsService } from './products.service';
+import { Product } from './schema/product.schema';
 
 @Controller('products')
 export class ProductsController {
   constructor(private readonly productsService: ProductsService) {}
 
   @Post()
-  async create(@Body() createProductDto: CreateProductDto) {
-    await this.productsService.create(createProductDto);
+  @UseInterceptors(FileInterceptor('mainImage'), FilesInterceptor('extraImages'))
+  async create(@Body() createProductDto: CreateProductDto, @UploadedFile() mainImage, @UploadedFiles() extraImages): Promise<Product> {
+    return this.productsService.create(createProductDto, mainImage, extraImages);
   }
 
   @Get()
