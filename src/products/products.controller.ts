@@ -1,5 +1,5 @@
 // products.controller.ts
-import { Body, Controller, Get, Post, UploadedFiles, UseInterceptors } from '@nestjs/common';
+import { Body, Controller, Get, Post, UploadedFiles, UseInterceptors, Delete, NotFoundException, Param } from '@nestjs/common';
 import { FileFieldsInterceptor } from '@nestjs/platform-express';
 import { CreateProductDto } from './dto/create-product.dto';
 import { ProductsService } from './products.service';
@@ -25,5 +25,9 @@ export class ProductsController {
   @Get()
   async findAll(): Promise<Product[]> {
     return this.productsService.findAll();
+  }
+  @Delete(':id')
+  async delete(@Param('id') id: string): Promise<void> {
+    return this.productsService.delete(id);
   }
 }
