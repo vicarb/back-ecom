@@ -1,19 +1,20 @@
-import { IsString, IsNumber, IsArray } from 'class-validator';
+// create-product.dto.ts
+import { IsNotEmpty, IsNumber, IsString } from 'class-validator';
 
 export class CreateProductDto {
+  @IsNotEmpty()
   @IsString()
-  readonly title: string;
+  title: string;
 
+  @IsNotEmpty()
   @IsString()
-  readonly description: string;
+  description: string;
 
+  @IsNotEmpty()
   @IsNumber()
-  readonly price: number;
+  price: number;
 
-  @IsString()
-  mainImage: string;
-
-  @IsArray()
-  @IsString({ each: true })
-  extraImages: string[];
+  // Add these lines:
+  mainImage?: string;
+  extraImages?: string[];
 }

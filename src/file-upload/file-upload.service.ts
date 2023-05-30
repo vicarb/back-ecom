@@ -4,10 +4,10 @@ import { v4 as uuidv4 } from 'uuid';
 
 @Injectable()
 export class FileUploadService {
-  private readonly bucketName = 'ecom-bucket-22';
+  private readonly bucketName = 'ecom-bucket-222'; // Updated bucket name
   private readonly storage = new Storage({
     projectId: 'compostera-387703',
-    keyFilename: './compostera-387703-a318b548d931.json',
+    keyFilename: './compostera-387703-5281b7918f7a.json',
   });
 
   async upload(file: Express.Multer.File): Promise<string> {

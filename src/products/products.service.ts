@@ -2,9 +2,9 @@
 import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
+import { FileUploadService } from '../file-upload/file-upload.service';
 import { Product, ProductDocument } from './schema/product.schema';
 import { CreateProductDto } from './dto/create-product.dto';
-import { FileUploadService } from '../file-upload/file-upload.service';
 
 @Injectable()
 export class ProductsService {
@@ -13,9 +13,22 @@ export class ProductsService {
     private readonly fileUploadService: FileUploadService,
   ) {}
 
-  async create(createProductDto: CreateProductDto, mainImage: Express.Multer.File, extraImages: Express.Multer.File[]): Promise<Product> {
-    createProductDto.mainImage = await this.fileUploadService.upload(mainImage);
-    createProductDto.extraImages = await Promise.all(extraImages.map(file => this.fileUploadService.upload(file)));
+  async create(
+    createProductDto: CreateProductDto,
+    mainImage?: Express.Multer.File,
+    extraImages?: Express.Multer.File[]
+  ): Promise<Product> {
+    if (mainImage) {
+      const uploadedMainImage = await this.fileUploadService.upload(mainImage);
+      createProductDto.mainImage = uploadedMainImage;
+    }
+    if (extraImages) {
+      const uploadedExtraImages = await Promise.all(
+        extraImages.map((file) => this.fileUploadService.upload(file))
+      );
+      createProductDto.extraImages = uploadedExtraImages;
+    }
+
     const createdProduct = new this.productModel(createProductDto);
     return createdProduct.save();
   }
@@ -24,3 +37,4 @@ export class ProductsService {
     return this.productModel.find().exec();
   }
 }
+

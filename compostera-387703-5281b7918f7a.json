@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "compostera-387703",
+  "private_key_id": "5281b7918f7a16bcc3e07d2a84ad96d7de19fd82",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCJcWfhRoXoC1il\nC7kREjZbyO9ldLrqKSMYeaqeY2x83eO0Pg5XYlV7u8SHDW0wmluAGFHfH1W2Nv3a\nbYfHbiLpYxSBfMMBPaMka/Q+5ZUl8tKri1s8X7RELMkNMJDMagXme1d8fJw+LakA\nurQfd/iAS+2V/7+///9uKq+20zsxY8bI67Vwt0A5MeoOe1rbGOqlOE2mLY3IFHEr\n3716uUulnV9Ho7uo643XIklds2wmmp7JewhJUfLnYTLZ8tG4RUfcid24n7nnNuy+\nBnSt9pHT8gcE1ZwF37LTP42I05YV8NoO2XUwx66LgBl8k+RF73VyCp3CRJNrHBsJ\nzD11PwDdAgMBAAECggEACiIyZomslc9AWerjWj7dgybtf617mogt7kAKNGNgPFSf\n1Uo+BHNbmiPd+Zcj1dGLrYYdgzXsO+MSFGi++hVEvbBwcpugRRcmUCkleP20YXfl\n0IAV2f20bNJggHh0NJ4ckUHG0Ybefjcfns4lOay+xbbTbZvNp3pYeubqzbAFTT7S\nYB2Q1kTjXWa5b3eSEqSJ+w54ogzdfX2aXBgvX+wC5GyIPQtiS8G7sAWhni4eq28/\nTv6h+kRKTMjrq72TMjVmhaMYwDxIJ74qyQvJJJ6nIPEYWfaoBFBSe3A+a3goWeeT\n3P44om0gaeczqEgleEexeNysiWuYVqOToj3LnnTEAQKBgQC8ZbicQm7mcDTucueK\nqOhcnIBU1drXdfGMMAIhw+EuXAS8+aN2IzKGS8ufEMlCjLGOpJPE9nps3Rt8IS/N\nVj5JlSlD/jg4BbZydaHig11sK2lpQsSz32Q/BkiH96TADO4IEXfOw4+JJVWi8PzB\nYE1+eqczXwv79Vb+zAZcS6FbOQKBgQC6wv2k2F0ISU0mgvD6Cf+RcjsqzKQdMH0u\nN+qQQ83LCgzxerx98FE3xOk6NFiHMA98vZhghV7pKXdHba0Iof7mzn8z1Gp0Gs8t\nm/canypTdGOsbjK1jk4qRuMAtUjpbDGPoN+oFnNVWDMRss5a0klKAoGlZwdVOPQJ\nSLeVEdw+xQKBgHh7tSx5b+L/L1qvMVSD4NYZYBjhCytvyiIVMcfWNVQolP8lx1vt\n9oncP0Riv9NHluXaaoYz+udUIBeqQZ/X382/Drzk/58USDG6+OSbjkt3F9qxUIqX\n+swzgH8z6LDJlBCk2zHn7wuOTM3/wCULKYQRfIxl5IwlwpUAdbDgzThBAoGAYogd\naar86jJCEd9jY4eC3il2Lc5phzzdzlSR3CrpmAVlbsFiUM9JCjNJGPwk+K3Sfe1J\nRyMWP80wsO6cK8HLydmIIsAeqcK7K0TtyY3Pttfg/kflWQQLGSLtAKKkJQJ/41bs\nqLGvh4dQ6jV7yU7Ie9N2stz4cW3q0jsbH/qcSEECgYArgzrcsZYOllnKATMihVRw\nLcL5Q15c+ngQlIHs152TYZxe0OPDXLv9ftGdHPNgm+Nx7Jb3WvShS8TIq0u+PQHp\nsdpaZsMXyiH2eAzgB/8yp7UXcYD3ACYZwdu2GBcwVu87CJDfqMerMKKw22WIs/Jj\nOzQ/aEw/XK1rJwwGogXtXQ==\n-----END PRIVATE KEY-----\n",
+  "client_email": "nueva-cuenta-comp@compostera-387703.iam.gserviceaccount.com",
+  "client_id": "111184738439664169895",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/nueva-cuenta-comp%40compostera-387703.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
