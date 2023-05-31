@@ -5,6 +5,7 @@ import { Model } from 'mongoose';
 import { FileUploadService } from '../file-upload/file-upload.service';
 import { Product, ProductDocument } from './schema/product.schema';
 import { CreateProductDto } from './dto/create-product.dto';
+import { UpdateProductDto } from './dto/update-product.dto';
 
 @Injectable()
 export class ProductsService {
@@ -42,6 +43,21 @@ export class ProductsService {
     if (result.deletedCount === 0) {
       throw new NotFoundException('Could not find product.');
     }
+  }
+  async findOne(id: string): Promise<Product> {
+    const product = await this.productModel.findById(id);
+    if (!product) {
+      throw new NotFoundException('Product not found');
+    }
+    return product;
+  }
+
+  async update(id: string, updateProductDto: UpdateProductDto): Promise<Product> {
+    const updatedProduct = await this.productModel.findByIdAndUpdate(id, updateProductDto, { new: true });
+    if (!updatedProduct) {
+      throw new NotFoundException('Could not find product.');
+    }
+    return updatedProduct;
   }
 }
 
