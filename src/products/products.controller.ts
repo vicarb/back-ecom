@@ -11,6 +11,8 @@ import { UpdateProductDto } from './dto/update-product.dto';
 export class ProductsController {
   constructor(private readonly productsService: ProductsService) {}
 
+  
+
   @Post()
   @UseInterceptors(FileFieldsInterceptor([
     { name: 'mainImage', maxCount: 1 },
