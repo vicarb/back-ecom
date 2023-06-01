@@ -13,6 +13,7 @@ import { CoberturasService } from './coberturas/coberturas.service';
 import { CoberturasController } from './coberturas/coberturas.controller';
 import { CoberturasModule } from './coberturas/coberturas.module';
 import { CotizadorModule } from './cotizador/cotizador.module';
+import { CartModule } from './cart/cart.module';
 
 @Module({
   imports: [
@@ -23,6 +24,7 @@ import { CotizadorModule } from './cotizador/cotizador.module';
     TransactionModule,
     CoberturasModule,
     CotizadorModule,
+    CartModule,
   ],
   controllers: [AppController, GooglePlacesController, CoberturasController],
   providers: [AppService, GooglePlacesService, CoberturasService],
