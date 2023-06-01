@@ -9,6 +9,9 @@ import { TransactionModule } from './transaction/transaction.module';
 import { ConfigModule } from '@nestjs/config';
 import { GooglePlacesService } from './google-places/google-places.service';
 import { GooglePlacesController } from './google-places/google-places.controller';
+import { CoberturasService } from './coberturas/coberturas.service';
+import { CoberturasController } from './coberturas/coberturas.controller';
+import { CoberturasModule } from './coberturas/coberturas.module';
 
 @Module({
   imports: [
@@ -17,8 +20,9 @@ import { GooglePlacesController } from './google-places/google-places.controller
     ProductsModule,
     FileUploadModule, // add the module here
     TransactionModule,
+    CoberturasModule,
   ],
-  controllers: [AppController, GooglePlacesController],
-  providers: [AppService, GooglePlacesService],
+  controllers: [AppController, GooglePlacesController, CoberturasController],
+  providers: [AppService, GooglePlacesService, CoberturasService],
 })
 export class AppModule {}
