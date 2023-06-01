@@ -12,6 +12,7 @@ import { GooglePlacesController } from './google-places/google-places.controller
 import { CoberturasService } from './coberturas/coberturas.service';
 import { CoberturasController } from './coberturas/coberturas.controller';
 import { CoberturasModule } from './coberturas/coberturas.module';
+import { CotizadorModule } from './cotizador/cotizador.module';
 
 @Module({
   imports: [
@@ -21,6 +22,7 @@ import { CoberturasModule } from './coberturas/coberturas.module';
     FileUploadModule, // add the module here
     TransactionModule,
     CoberturasModule,
+    CotizadorModule,
   ],
   controllers: [AppController, GooglePlacesController, CoberturasController],
   providers: [AppService, GooglePlacesService, CoberturasService],
