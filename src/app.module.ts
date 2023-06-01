@@ -7,6 +7,8 @@ import { FileUploadModule } from './file-upload/file-upload.module';
 import { TransactionModule } from './transaction/transaction.module';
 
 import { ConfigModule } from '@nestjs/config';
+import { GooglePlacesService } from './google-places/google-places.service';
+import { GooglePlacesController } from './google-places/google-places.controller';
 
 @Module({
   imports: [
@@ -16,7 +18,7 @@ import { ConfigModule } from '@nestjs/config';
     FileUploadModule, // add the module here
     TransactionModule,
   ],
-  controllers: [AppController],
-  providers: [AppService],
+  controllers: [AppController, GooglePlacesController],
+  providers: [AppService, GooglePlacesService],
 })
 export class AppModule {}

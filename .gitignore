@@ -18,6 +18,7 @@ lerna-debug.log*
 /coverage
 /.nyc_output
 compostera-387703-5281b7918f7a.json
+.env
 # IDEs and editors
 /.idea
 .project
